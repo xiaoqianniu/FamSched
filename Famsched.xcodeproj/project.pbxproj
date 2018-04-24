@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EAE1C671208F89480027F1DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C670208F89480027F1DE /* AppDelegate.swift */; };
-		EAE1C673208F89480027F1DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C672208F89480027F1DE /* ViewController.swift */; };
+		EAE1C673208F89480027F1DE /* FamschedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C672208F89480027F1DE /* FamschedViewController.swift */; };
 		EAE1C676208F89480027F1DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE1C674208F89480027F1DE /* Main.storyboard */; };
 		EAE1C678208F89480027F1DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE1C677208F89480027F1DE /* Assets.xcassets */; };
 		EAE1C67B208F89480027F1DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE1C679208F89480027F1DE /* LaunchScreen.storyboard */; };
+		EAE1C688208F8C630027F1DE /* FamScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C686208F8C630027F1DE /* FamScheduleCell.swift */; };
+		EAE1C689208F8C630027F1DE /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE1C687208F8C630027F1DE /* ScheduleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EAE1C66D208F89480027F1DE /* Famsched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Famsched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE1C670208F89480027F1DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAE1C672208F89480027F1DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAE1C672208F89480027F1DE /* FamschedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamschedViewController.swift; sourceTree = "<group>"; };
 		EAE1C675208F89480027F1DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAE1C677208F89480027F1DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAE1C67A208F89480027F1DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAE1C67C208F89480027F1DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE1C686208F8C630027F1DE /* FamScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamScheduleCell.swift; sourceTree = "<group>"; };
+		EAE1C687208F8C630027F1DE /* ScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		EAE1C66F208F89480027F1DE /* Famsched */ = {
 			isa = PBXGroup;
 			children = (
+				EAE1C684208F8BA60027F1DE /* Controller */,
+				EAE1C683208F8B9F0027F1DE /* View */,
+				EAE1C682208F8B900027F1DE /* Model */,
 				EAE1C670208F89480027F1DE /* AppDelegate.swift */,
-				EAE1C672208F89480027F1DE /* ViewController.swift */,
-				EAE1C674208F89480027F1DE /* Main.storyboard */,
 				EAE1C677208F89480027F1DE /* Assets.xcassets */,
 				EAE1C679208F89480027F1DE /* LaunchScreen.storyboard */,
 				EAE1C67C208F89480027F1DE /* Info.plist */,
 			);
 			path = Famsched;
+			sourceTree = "<group>";
+		};
+		EAE1C682208F8B900027F1DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAE1C683208F8B9F0027F1DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAE1C674208F89480027F1DE /* Main.storyboard */,
+				EAE1C685208F8BC00027F1DE /* Schedule Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAE1C684208F8BA60027F1DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAE1C672208F89480027F1DE /* FamschedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EAE1C685208F8BC00027F1DE /* Schedule Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EAE1C686208F8C630027F1DE /* FamScheduleCell.swift */,
+				EAE1C687208F8C630027F1DE /* ScheduleCell.xib */,
+			);
+			path = "Schedule Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +163,7 @@
 			files = (
 				EAE1C67B208F89480027F1DE /* LaunchScreen.storyboard in Resources */,
 				EAE1C678208F89480027F1DE /* Assets.xcassets in Resources */,
+				EAE1C689208F8C630027F1DE /* ScheduleCell.xib in Resources */,
 				EAE1C676208F89480027F1DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE1C673208F89480027F1DE /* ViewController.swift in Sources */,
+				EAE1C673208F89480027F1DE /* FamschedViewController.swift in Sources */,
 				EAE1C671208F89480027F1DE /* AppDelegate.swift in Sources */,
+				EAE1C688208F8C630027F1DE /* FamScheduleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
