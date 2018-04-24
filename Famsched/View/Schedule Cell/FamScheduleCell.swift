@@ -14,7 +14,7 @@ class FamScheduleCell: UITableViewCell {
     
     @IBOutlet weak var familyName: UILabel!
     
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var dates: UILabel!
     
     @IBOutlet weak var futureThings: UILabel!
     
@@ -27,6 +27,13 @@ class FamScheduleCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func commonInit(_ imageName:String, title:String, date:String, things:String){
+        familyPicture.image = UIImage(named: imageName)
+        familyName.text = title
+        dates.text = date
+        futureThings.text = things
     }
     
 }
