@@ -33,7 +33,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Famsched" id="kr1-UA-w9J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tfc-26-c1P"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tfc-26-c1P">
+                            <connections>
+                                <action selector="addScheduleAlert:" destination="t2q-YM-1MW" id="Ulx-lF-BbD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fp-Wd-wbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
