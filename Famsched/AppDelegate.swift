@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+       
+        let data = Data()
+        data.date = "20180405"
+        data.memberName = "muge"
+        data.schedule = "read a book"
+        
+        
+        do{
+           let realm = try Realm()
+            try realm.write {
+              realm.add(data)
+            }
+        }catch{
+            print(error)
+        }
+        
+        
         return true
     }
 
