@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Data : Object {
+class ScheduleData : Object {
     @objc dynamic var memberName : String = ""
     @objc dynamic var date : String = ""
     @objc dynamic var schedule : String = ""

@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FamschedViewController: UITableViewController {
     
-    
-    var scheduleArray = ["schedule1","schedule2","schedule3","schedule4","schedule5"]
-    var famName = ["Mommy","Daddy","Muge","Muyang","Muqi"]
-    var dateArray = ["20180220","20180311","20180312","20180805","20180105"]
+    let realm = try! Realm()
+    var scheduleArray : Results<ScheduleData>!
     
     var nameTextField = UITextField()
     var thingsTextField = UITextField()
@@ -23,7 +22,7 @@ class FamschedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        loadData()
         //TODO: register the ScheduleCell.xib file
         
         let nibName = UINib(nibName: "ScheduleCell", bundle: nil)
@@ -39,7 +38,8 @@ class FamschedViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "famScheduleCell", for: indexPath) as! FamScheduleCell
        
 
-        cell.commonInit("p_\(indexPath.row)", title: famName[indexPath.row], date: dateArray[indexPath.row], things: scheduleArray[indexPath.row])
+        cell.commonInit("p_\(indexPath.row)", title:scheduleArray[indexPath.row].memberName, date: scheduleArray[indexPath.row].date, things: scheduleArray[indexPath.row].schedule)
+        
         return cell
         
     }
@@ -59,11 +59,12 @@ class FamschedViewController: UITableViewController {
        let alert = UIAlertController(title: "Add New Schedule", message: nil, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (OKaction) in
           //what will happen when you press the ok button
-            self.scheduleArray.append(self.thingsTextField.text!)
-            self.famName.append(self.nameTextField.text!)
-            self.dateArray.append((self.dateTextField?.text)!)
-            self.tableView.reloadData()
-            print("ok")
+            let schedules = ScheduleData()
+            schedules.schedule.append(self.thingsTextField.text!)
+            schedules.memberName.append(self.nameTextField.text!)
+            schedules.date.append((self.dateTextField?.text)!)
+            
+            self.saveData(scheduleData: schedules)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -90,6 +91,25 @@ class FamschedViewController: UITableViewController {
         
     }
     
+    // TODO: Save the data
+    func saveData(scheduleData:ScheduleData){
+        do{
+        try realm.write {
+            realm.add(scheduleData)
+        }
+        }catch{
+            print(error)
+        }
+        tableView.reloadData()
+    }
+    //TODO: Load the data
+    func loadData(){
+        
+        scheduleArray = realm.objects(ScheduleData.self)
+        
+        tableView.reloadData()
+        
+    }
     
 
 }

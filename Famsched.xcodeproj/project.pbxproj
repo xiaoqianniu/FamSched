@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BD22C2D18F479F8FD8746BB7 /* Pods_Famsched.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B004FB7C4530A43642F60D0B /* Pods_Famsched.framework */; };
-		EACB38452090E8CD00937EF5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB38442090E8CD00937EF5 /* Data.swift */; };
+		EACB38452090E8CD00937EF5 /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB38442090E8CD00937EF5 /* ScheduleData.swift */; };
 		EAE1C671208F89480027F1DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C670208F89480027F1DE /* AppDelegate.swift */; };
 		EAE1C673208F89480027F1DE /* FamschedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE1C672208F89480027F1DE /* FamschedViewController.swift */; };
 		EAE1C676208F89480027F1DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE1C674208F89480027F1DE /* Main.storyboard */; };
@@ -22,7 +22,7 @@
 		0C35EF8777F76C27198B4EE0 /* Pods-Famsched.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Famsched.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Famsched/Pods-Famsched.debug.xcconfig"; sourceTree = "<group>"; };
 		B004FB7C4530A43642F60D0B /* Pods_Famsched.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Famsched.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC63AD825F71010E8DBC586C /* Pods-Famsched.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Famsched.release.xcconfig"; path = "Pods/Target Support Files/Pods-Famsched/Pods-Famsched.release.xcconfig"; sourceTree = "<group>"; };
-		EACB38442090E8CD00937EF5 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EACB38442090E8CD00937EF5 /* ScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
 		EAE1C66D208F89480027F1DE /* Famsched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Famsched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE1C670208F89480027F1DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE1C672208F89480027F1DE /* FamschedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamschedViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		EAE1C682208F8B900027F1DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EACB38442090E8CD00937EF5 /* Data.swift */,
+				EACB38442090E8CD00937EF5 /* ScheduleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 				EAE1C673208F89480027F1DE /* FamschedViewController.swift in Sources */,
 				EAE1C671208F89480027F1DE /* AppDelegate.swift in Sources */,
 				EAE1C688208F8C630027F1DE /* FamScheduleCell.swift in Sources */,
-				EACB38452090E8CD00937EF5 /* Data.swift in Sources */,
+				EACB38452090E8CD00937EF5 /* ScheduleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

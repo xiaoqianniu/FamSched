@@ -19,21 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(Realm.Configuration.defaultConfiguration.fileURL)
        
-        let data = Data()
-        data.date = "20180405"
-        data.memberName = "muge"
-        data.schedule = "read a book"
+//        let data = Data()
+//        data.date = "20180405"
+//        data.memberName = "muge"
+//        data.schedule = "read a book"
         
         
-        do{
-           let realm = try Realm()
-            try realm.write {
-              realm.add(data)
-            }
-        }catch{
-            print(error)
-        }
-        
+//        do{
+//           let realm = try Realm()
+//            try realm.write {
+//              realm.add(data)
+//            }
+//        }catch{
+//            print(error)
+//        }
         
         return true
     }
